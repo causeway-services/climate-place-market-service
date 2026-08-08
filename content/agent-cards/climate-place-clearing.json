@@ -1,0 +1,26 @@
+{
+  "name": "Climate Place Daily Clearing Service",
+  "description": "Delivers the one already-witnessed market-selected town or city for an exact civil day without supplying research or publication authority.",
+  "supportedInterfaces": [
+    { "url": "${BASE_URL}/a2a/jsonrpc", "protocolBinding": "JSONRPC", "tenant": "", "protocolVersion": "1.0" },
+    { "url": "${BASE_URL}/a2a/rest", "protocolBinding": "HTTP+JSON", "tenant": "", "protocolVersion": "1.0" }
+  ],
+  "provider": { "url": "https://emsenn.net/", "organization": "Climate Place Market Enterprise via A2A Services Section" },
+  "version": "1.0.0",
+  "capabilities": { "streaming": false, "pushNotifications": false, "extensions": [], "extendedAgentCard": false },
+  "securitySchemes": {},
+  "securityRequirements": [],
+  "defaultInputModes": ["application/rmn+cbor"],
+  "defaultOutputModes": ["application/rmn+cbor"],
+  "skills": [{
+    "id": "climate-place-daily-clearing",
+    "name": "Climate place daily clearing delivery",
+    "description": "Returns the exact witnessed market clearing for one America/Chicago civil day or a typed refusal.",
+    "tags": ["climate", "place", "market", "daily-clearing"],
+    "examples": [],
+    "inputModes": ["application/rmn+cbor"],
+    "outputModes": ["application/rmn+cbor"],
+    "securityRequirements": []
+  }],
+  "signatures": []
+}

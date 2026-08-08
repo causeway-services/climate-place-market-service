@@ -1,0 +1,19 @@
+{
+  "type": "ClimatePlaceDailyClearingAgentActivation",
+  "status": "enabled-active-under-user-systemd",
+  "desiredState": "enabled-active",
+  "serviceUnit": "emsweb-climate-place-market-clearing-a2a.service",
+  "host": "127.0.0.1",
+  "port": 18446,
+  "baseUrl": "http://127.0.0.1:18446",
+  "agentCard": "content/agent-cards/climate-place-clearing.json",
+  "signingKeyDataPath": "data/credentials/climate-place-clearing-agent-card.pkcs8.pem",
+  "publicJwks": "content/agent-cards/climate-place-clearing-jwks.json",
+  "signingKid": "climate-place-clearing-ed25519",
+  "algorithm": "EdDSA",
+  "agentCardIdentity": "ni:///sha-256;u9nKRRLfXpX7Wn1X6bHJRUGDbjqtcjPrCMnvwmWV5ec",
+  "agentCardSignatureIdentity": "ni:///sha-256;WbkHnEpjoChK8ZKOtxqAens_u-3a6Pu-FqIIeYodXTo",
+  "timeoutMs": 30000,
+  "customers": ["urn:ame:climate-youtube-channel-enterprise"],
+  "authorityWithheld": ["bid-formation", "research-procurement", "notebooklm-authority", "youtube-publication"]
+}

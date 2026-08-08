@@ -1,0 +1,13 @@
+{
+  "type": "ClimatePlaceMarketPolicy",
+  "status": "active",
+  "timezone": "America/Chicago",
+  "placeKinds": ["town", "city"],
+  "minimumHistoryStartYear": 1850,
+  "maximumForecastHorizonYear": 2100,
+  "minimumForecastLeadYears": 10,
+  "placeCooldownDays": 365,
+  "accountingUnit": "USD-micros",
+  "externalSettlementProtocol": "x402",
+  "ranking": ["coverageBidMicros-desc", "verifiedDemandMicros-desc", "bidAt-asc", "id-asc"]
+}

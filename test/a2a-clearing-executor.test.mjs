@@ -1,0 +1,10 @@
+import assert from "node:assert/strict";
+import { mkdtempSync, rmSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import test from "node:test";
+import { startWitnessJournalProviderProcess } from "@red-cup-engineering/witness-journal-rdf-projection-service/test-provider";
+import { admitCoverageBid, clearDailyPlace } from "../src/market.mjs";
+import { deliverDailyClearing, formDailyClearingDemand } from "../src/a2a-clearing-executor.mjs";
+const NOW="2080-07-21T12:00:00.000Z",DAY="2080-07-21",SETTLEMENT="eip155:31337:0x1111111111111111111111111111111111111111";
+test("the A2A face delivers only one exact already-witnessed daily clearing",async(t)=>{const dataRoot=mkdtempSync(join(tmpdir(),"climate-place-a2a-")),witnessJournal=await startWitnessJournalProviderProcess();t.after(async()=>{await witnessJournal.close();rmSync(dataRoot,{recursive:true,force:true});});const options={dataRoot,witnessJournalAgentUrl:witnessJournal.agentCardUrl,settlement:SETTLEMENT,at:NOW,verifySettlementCommitment:async()=>true,verifyBidCommitment:async()=>true};const commitment=`ni:///sha-256;${"A".repeat(43)}`;await admitCoverageBid({bidder:"urn:ame:coverage-buyer",customer:"urn:ame:climate-youtube-channel-enterprise",place:{id:"geonames:4887398",kind:"city",name:"Chicago",region:"Illinois",countryCode:"US",latitudeE6:41880000,longitudeE6:-87630000,timezone:"America/Chicago"},coverageBidMicros:900000,researchBudgetMicros:500000,accountingUnit:"USD-micros",verifiedDemandMicros:20,demandSignals:[],historyStartYear:1900,forecastHorizonYear:2100,expiresAt:"2080-07-25T00:00:00.000Z",settlementMode:"same-legal-body-cost-allocation",settlementCommitment:commitment},options);const demand=formDailyClearingDemand(DAY);assert.equal(deliverDailyClearing(demand,{dataRoot}).code,"daily-clearing-not-yet-witnessed");const clearing=await clearDailyPlace({civilDay:DAY},options),result=deliverDailyClearing(demand,{dataRoot});assert.equal(result.disposition,"delivered");assert.equal(result.delivery.clearing.id,clearing.id);assert.equal(result.delivery.demand,demand.id);});

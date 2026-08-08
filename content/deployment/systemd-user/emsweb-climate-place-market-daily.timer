@@ -1,0 +1,9 @@
+[Unit]
+Description=Clear one climate place market per America/Chicago civil day
+[Timer]
+OnCalendar=*-*-* 01:30:00 America/Chicago
+Persistent=true
+AccuracySec=1s
+Unit=emsweb-climate-place-market-daily.service
+[Install]
+WantedBy=timers.target

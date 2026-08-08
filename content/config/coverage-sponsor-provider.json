@@ -1,0 +1,3 @@
+{
+  "type":"ClimateCoverageSponsorProviderBinding","status":"active","customer":"urn:ame:climate-place-market-enterprise","provider":"urn:ame:turntide-islands-climate-coverage-sponsor","agentUrl":"http://127.0.0.1:18454/.well-known/agent-card.json","agentCardIdentity":"ni:///sha-256;Z4q8jJTXOoIzs4mfI-Upc8FV3GvxVuVcnmcUs54eq8g","agentCardSignatureIdentity":"ni:///sha-256;EW3awzRsrBhPm1VdEvDLyVVBXkUTRhh91FqgOa-AaZM","contract":"ni:///sha-256;OkZZxi8GAUmomeMn5JVB6jEWKbHMLwQmgZcaSXnJN48","settlementMode":"same-legal-body-cost-allocation","authorityWithheld":["market-clearing","research-truth","notebooklm","youtube-publication"]
+}

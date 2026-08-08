@@ -1,0 +1,23 @@
+[Unit]
+Description=emsWeb climate place market daily clearing A2A provider
+After=network.target witness-journal-rdf-projection-service.service
+Requires=witness-journal-rdf-projection-service.service
+
+[Service]
+Type=simple
+WorkingDirectory=/home/emsenn/info/lib/emsenn/services/561-group/services/rsc-quiescent/services/emsweb/services/climate-place-market-enterprise
+ExecStart=/home/emsenn/.config/nvm/versions/node/v24.13.1/bin/node src/serve-clearing-a2a.mjs
+Environment=CLIMATE_PLACE_MARKET_DATA_ROOT=/home/emsenn/info/lib/emsenn/services/561-group/services/rsc-quiescent/services/emsweb/services/climate-place-market-enterprise/data
+Restart=on-failure
+RestartSec=5s
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadOnlyPaths=/home/emsenn/info/lib/emsenn/services/561-group/services/rsc-quiescent/services/emsweb/services/climate-place-market-enterprise/data
+ReadWritePaths=/home/emsenn/info/lib/emsenn/services/561-group/services/rsc-quiescent/services/emsweb/services/climate-place-market-enterprise/data/a2a/tasks
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+UMask=0077
+
+[Install]
+WantedBy=default.target

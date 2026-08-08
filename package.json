@@ -1,0 +1,23 @@
+{
+  "name": "@emsweb/climate-place-market-enterprise",
+  "version": "0.1.2",
+  "private": true,
+  "type": "module",
+  "description": "Sovereign daily market for town-or-city climate coverage selection.",
+  "scripts": {
+    "check": "node --check src/market.mjs && node --check src/coverage-sponsor-client.mjs && node --check src/daily-runner.mjs && node --check src/a2a-clearing-executor.mjs && node --check src/serve-clearing-a2a.mjs && node --check test/market.test.mjs && node --check test/coverage-sponsor-client.test.mjs && node --check test/a2a-clearing-executor.test.mjs",
+    "serve-clearing": "node src/serve-clearing-a2a.mjs",
+    "daily": "node src/daily-runner.mjs",
+    "test": "node --test test/market.test.mjs test/coverage-sponsor-client.test.mjs test/a2a-clearing-executor.test.mjs",
+    "verify": "npm run check && npm test"
+  },
+  "dependencies": {
+    "@red-cup-engineering/a2a-agent-card-discovery-service": "1.0.1",
+    "@red-cup-engineering/a2a-contracted-agent-service": "2.0.5",
+    "@red-cup-engineering/a2a-rmn-part-service": "1.0.1",
+    "@red-cup-engineering/a2a-rmn-task-client-service": "1.1.1",
+    "@red-cup-engineering/semantic-content-identify-service": "0.2.2",
+    "@red-cup-engineering/witness-journal-rdf-projection-service": "1.1.0"
+  },
+  "license": "UNLICENSED"
+}
