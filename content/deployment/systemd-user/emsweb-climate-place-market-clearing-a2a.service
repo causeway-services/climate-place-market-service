@@ -5,17 +5,17 @@ Requires=witness-journal-rdf-projection-service.service
 
 [Service]
 Type=simple
-WorkingDirectory=/home/emsenn/info/lib/emsenn/services/561-group/services/rsc-quiescent/services/emsweb/services/climate-place-market-enterprise
+WorkingDirectory=/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-ecological-services-section/services/public-climate-services-section/services/climate-place-market-service
 ExecStart=/home/emsenn/.config/nvm/versions/node/v24.13.1/bin/node src/serve-clearing-a2a.mjs
-Environment=CLIMATE_PLACE_MARKET_DATA_ROOT=/home/emsenn/info/lib/emsenn/services/561-group/services/rsc-quiescent/services/emsweb/services/climate-place-market-enterprise/data
+Environment=CLIMATE_PLACE_MARKET_DATA_ROOT=/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-ecological-services-section/services/public-climate-services-section/services/climate-place-market-service/data
 Restart=on-failure
 RestartSec=5s
 NoNewPrivileges=true
 PrivateTmp=true
 ProtectSystem=strict
 ProtectHome=read-only
-ReadOnlyPaths=/home/emsenn/info/lib/emsenn/services/561-group/services/rsc-quiescent/services/emsweb/services/climate-place-market-enterprise/data
-ReadWritePaths=/home/emsenn/info/lib/emsenn/services/561-group/services/rsc-quiescent/services/emsweb/services/climate-place-market-enterprise/data/a2a/tasks
+ReadOnlyPaths=/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-ecological-services-section/services/public-climate-services-section/services/climate-place-market-service/data
+ReadWritePaths=/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-ecological-services-section/services/public-climate-services-section/services/climate-place-market-service/data/a2a/tasks
 RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
 UMask=0077
 

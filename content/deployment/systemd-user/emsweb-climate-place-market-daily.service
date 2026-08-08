@@ -4,13 +4,13 @@ After=network-online.target emsweb-climate-coverage-sponsor-a2a.service
 Wants=network-online.target
 [Service]
 Type=oneshot
-WorkingDirectory=/home/emsenn/info/lib/emsenn/services/561-group/services/rsc-quiescent/services/emsweb/services/climate-place-market-enterprise
+WorkingDirectory=/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-ecological-services-section/services/public-climate-services-section/services/climate-place-market-service
 ExecStart=/home/emsenn/.config/nvm/versions/node/v24.13.1/bin/node src/daily-runner.mjs
 Environment=WITNESS_JOURNAL_RDF_AGENT=http://127.0.0.1:19764/.well-known/agent-card.json
 NoNewPrivileges=true
 PrivateTmp=true
 ProtectSystem=strict
 ProtectHome=read-only
-ReadWritePaths=/home/emsenn/info/lib/emsenn/services/561-group/services/rsc-quiescent/services/emsweb/services/climate-place-market-enterprise/data
+ReadWritePaths=/home/emsenn/info/lib/emsenn/services/561-group/services/public-services-section/services/public-ecological-services-section/services/public-climate-services-section/services/climate-place-market-service/data
 RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
 UMask=0077
