@@ -1,1 +1,1 @@
-{"keys":[{"crv":"Ed25519","x":"BEAbTrCNS7MqtrntCmZp6Dtx_rt1dnjIk3WAJbe8mDQ","kty":"OKP","kid":"climate-place-clearing-ed25519","alg":"EdDSA","use":"sig"}]}
+{"keys":[{"crv":"Ed25519","x":"iKSliAhZ994Ywy9T5ZIxi6t8TRcGG2S2bcIAytdnhLk","kty":"OKP","kid":"climate-place-clearing-ed25519-2026-10-21","alg":"EdDSA","use":"sig"}]}

@@ -9,7 +9,7 @@
   "agentCard": "content/agent-cards/climate-place-clearing.json",
   "signingKeyDataPath": "data/credentials/climate-place-clearing-agent-card.pkcs8.pem",
   "publicJwks": "content/agent-cards/climate-place-clearing-jwks.json",
-  "signingKid": "climate-place-clearing-ed25519",
+  "signingKid": "climate-place-clearing-ed25519-2026-10-21",
   "algorithm": "EdDSA",
   "agentCardIdentity": "ni:///sha-256;u9nKRRLfXpX7Wn1X6bHJRUGDbjqtcjPrCMnvwmWV5ec",
   "agentCardSignatureIdentity": "ni:///sha-256;WbkHnEpjoChK8ZKOtxqAens_u-3a6Pu-FqIIeYodXTo",
