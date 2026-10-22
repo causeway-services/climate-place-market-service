@@ -19,9 +19,13 @@
     "@red-cup-engineering/semantic-content-identify-service": "0.2.2",
     "@red-cup-engineering/witness-journal-rdf-projection-service": "1.1.0"
   },
-  "license": "UNLICENSED",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/causeway-services/climate-place-market-service.git"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/561-group/.github/blob/main/TIPS.md"
   }
 }
