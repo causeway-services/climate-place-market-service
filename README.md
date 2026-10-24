@@ -8,3 +8,7 @@
 <!-- 561-group-standards:badges:end -->
 
 Sovereign daily market for town-or-city climate coverage selection.
+
+## Code custody
+
+This repository holds section data only. The executable code that reads this data lives in [red-cup-engineering/climate-place-market-service](https://github.com/red-cup-engineering/climate-place-market-service) (private). Point that engine at a checkout of this repository with `SECTION_DATA_ROOT` (default: the current directory).
